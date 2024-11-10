@@ -6,7 +6,7 @@
 /*   By: mohimi <mohimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 12:14:54 by mohimi            #+#    #+#             */
-/*   Updated: 2023/11/10 09:24:11 by mohimi           ###   ########.fr       */
+/*   Updated: 2023/11/27 12:04:31 by mohimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,3 @@ void	*ft_memset(void *str, int c, size_t n)
 	}
 	return (str);
 }
-// int main()
-// {
-// 	int a[] = {-42, 55};
-// 	ft_bzero(a, 0);
-// 	ft_memset(a, 57, 2);
-// 	ft_memset(a, 5, 1);
-// 	printf("%d\n", a[0]);
-// 	return (0);
-// }

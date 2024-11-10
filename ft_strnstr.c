@@ -6,7 +6,7 @@
 /*   By: mohimi <mohimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 20:12:37 by mohimi            #+#    #+#             */
-/*   Updated: 2023/11/11 21:21:15 by mohimi           ###   ########.fr       */
+/*   Updated: 2023/11/24 14:54:09 by mohimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	find = (char *)needle;
 	i = 0;
 	j = 0;
-	if (find[0] == 0)
+	if (find[0] == '\0')
 		return (str);
-	while (str[i] != '\0' && i < len)
+	while (i < len && str[i] != '\0')
 	{
 		while (str[i + j] == find[j] && str[i + j] != '\0' && i + j < len)
 		{

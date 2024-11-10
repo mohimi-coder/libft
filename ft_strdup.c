@@ -6,7 +6,7 @@
 /*   By: mohimi <mohimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 21:16:33 by mohimi            #+#    #+#             */
-/*   Updated: 2023/11/11 12:50:19 by mohimi           ###   ########.fr       */
+/*   Updated: 2023/11/21 10:01:00 by mohimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,3 @@ char	*ft_strdup(const char *src)
 	dst[i] = '\0';
 	return (dst);
 }
-// int main()
-// {
-// 	const char *mine = "mohamed himi";
-//     char *theirs;
-// 	theirs = ft_strdup(mine);
-// 	printf("mine: %s\n", mine);
-//     printf("theirs: %s\n", theirs);
-// }

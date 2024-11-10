@@ -6,7 +6,7 @@
 /*   By: mohimi <mohimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 10:57:36 by mohimi            #+#    #+#             */
-/*   Updated: 2023/11/04 15:30:27 by mohimi           ###   ########.fr       */
+/*   Updated: 2023/11/24 17:28:41 by mohimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	while (i < n)
 	{
 		if (str[i] == chr)
+		{
 			return ((void *)&str[i]);
+		}
 		i++;
 	}
 	return (NULL);

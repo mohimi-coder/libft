@@ -6,13 +6,13 @@
 /*   By: mohimi <mohimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/08 15:01:06 by mohimi            #+#    #+#             */
-/*   Updated: 2023/11/13 09:01:05 by mohimi           ###   ########.fr       */
+/*   Updated: 2023/11/22 14:12:33 by mohimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_countword(char const *str, char c)
+static int	ft_countword(char const *str, char c)
 {
 	int	i;
 	int	count;
@@ -35,7 +35,7 @@ int	ft_countword(char const *str, char c)
 	return (count);
 }
 
-void	ft_free_split(char **words)
+static void	ft_free_split(char **words)
 {
 	int	i;
 
@@ -52,36 +52,27 @@ char	**ft_split(char const *s, char c)
 {
 	int		wc;
 	int		wi;
-	int		i;
 	int		wl;
 	char	**words;
 
+	if (!s)
+		return (NULL);
 	wi = 0;
 	wc = ft_countword(s, c);
 	words = (char **)malloc (sizeof(char *) * (wc + 1));
-	if (!words)
+	if (words == NULL)
 		return (NULL);
-	i = 0;
 	while (wi < wc)
 	{
-		while (s[i] == c)
-			i++;
+		while (*s == c)
+			s++;
 		wl = 0;
-		while (s[i + wl] && s[i + wl] != c)
+		while (s[wl] && s[wl] != c)
 			wl++;
-		words[wi] = ft_substr(s, i, wl);
+		words[wi] = ft_substr(s, 0, wl);
 		if (!words[wi++])
 			return (ft_free_split(words), NULL);
-		i += wl;
+		s += wl;
 	}
 	return (words[wi] = NULL, words);
 }
-// int main(void)
-// {
-// 	const char *str = "gascggf shgddh aDGHDG add                  ";
-// 	char **words = ft_split(str, '1');
-// 	for (int i = 0; words[i] != NULL; i++) {
-// 		printf("Word %d: %s\n", i + 1, words[i]);
-// 	}
-// 	return 0;
-// }

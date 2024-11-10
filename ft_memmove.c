@@ -6,7 +6,7 @@
 /*   By: mohimi <mohimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:13:22 by mohimi            #+#    #+#             */
-/*   Updated: 2023/11/10 08:32:30 by mohimi           ###   ########.fr       */
+/*   Updated: 2023/11/27 11:49:33 by mohimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	s = (const unsigned char *)src;
 	i = 0;
 	if (src == NULL && dest == NULL)
-		return (NULL);
+		return (dest);
 	if (d < s)
 	{
 		while (i < n)
@@ -38,9 +38,3 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-
-// int main()
-// {
-// 	char *str = strdup("1234567890");//"himo";
-// 	printf("%s\n", ft_memmove(str + 2, str, 8));
-// }

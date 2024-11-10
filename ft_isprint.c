@@ -6,11 +6,11 @@
 /*   By: mohimi <mohimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 20:43:06 by mohimi            #+#    #+#             */
-/*   Updated: 2023/11/03 10:07:32 by mohimi           ###   ########.fr       */
+/*   Updated: 2023/11/22 15:14:57 by mohimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "libft.h"
+#include "libft.h"
 
 int	ft_isprint(int c)
 {

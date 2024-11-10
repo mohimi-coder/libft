@@ -6,7 +6,7 @@
 /*   By: mohimi <mohimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/07 08:12:51 by mohimi            #+#    #+#             */
-/*   Updated: 2023/11/10 07:52:17 by mohimi           ###   ########.fr       */
+/*   Updated: 2023/11/21 10:29:43 by mohimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	lentgh_s1 = ft_strlen(s1);
 	lentgh_s2 = ft_strlen(s2);
 	result = (char *) malloc((lentgh_s1 + lentgh_s2 + 1) * sizeof(char));
@@ -35,10 +37,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	result[j] = '\0';
 	return (result);
 }
-// int main() {
-//     const char *s1 = "Hello, ";
-//     const char *s2 = "world!";
-//     char *result = ft_strjoin(s1, s2);
-// 	printf("Joined string: %s\n", result);
-// 	return (0);
-// }

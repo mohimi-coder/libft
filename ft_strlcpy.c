@@ -6,7 +6,7 @@
 /*   By: mohimi <mohimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:46:52 by mohimi            #+#    #+#             */
-/*   Updated: 2023/11/05 10:15:44 by mohimi           ###   ########.fr       */
+/*   Updated: 2023/11/24 17:56:20 by mohimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	i = 0;
 	length_src = ft_strlen(src);
-	if (src == NULL)
-		return (0);
 	if (size > 0)
 	{
 		while (src[i] != '\0' && i < size - 1)
@@ -32,5 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	}
 	return (length_src);
 }
-// int main()
-// {}

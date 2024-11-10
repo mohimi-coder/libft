@@ -6,7 +6,7 @@
 /*   By: mohimi <mohimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/11 10:27:05 by mohimi            #+#    #+#             */
-/*   Updated: 2023/11/11 16:00:33 by mohimi           ###   ########.fr       */
+/*   Updated: 2023/11/24 15:40:15 by mohimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*resl;
 
 	i = 0;
-	len = ft_strlen(s);
-	if (s == NULL || f == NULL)
+	if (!s || !f)
 		return (NULL);
+	len = ft_strlen(s);
 	resl = ft_strdup(s);
 	if (resl == NULL)
 		return (NULL);
@@ -33,15 +33,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	resl[i] = '\0';
 	return (resl);
 }
-// int main()
-// {
-//     const char *str = "HELLO";
-//     char *result = ft_strmapi(str,uppercase);
-
-//     printf("Original string---->: %s\n", str);
-//     printf("Modified string---->: %s\n", result);
-
-//     free(result);
-
-//     return 0;
-// }

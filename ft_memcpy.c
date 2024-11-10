@@ -6,7 +6,7 @@
 /*   By: mohimi <mohimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 17:11:04 by mohimi            #+#    #+#             */
-/*   Updated: 2023/11/10 08:30:46 by mohimi           ###   ########.fr       */
+/*   Updated: 2023/11/27 12:03:48 by mohimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,3 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-// int main()
-// {
-// 	char dest[] = "";
-// 	printf("%s/n",ft_memcpy(dest, "coucou", 0));
-// 	memcpy(dest, "coucou", 0);
-// }

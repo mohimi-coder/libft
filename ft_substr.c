@@ -6,7 +6,7 @@
 /*   By: mohimi <mohimi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/05 16:17:39 by mohimi            #+#    #+#             */
-/*   Updated: 2023/11/11 12:51:04 by mohimi           ###   ########.fr       */
+/*   Updated: 2023/11/24 15:36:27 by mohimi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 	size_t	i;
 	char	*str;
 
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	if (start > ft_strlen(s))
 		return (ft_strdup(""));
 	if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
-	str = ft_calloc(len + 1, sizeof(char));
+	str = (char *) malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
 	i = 0;
@@ -32,14 +32,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		str[i] = s[start + i];
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
-// int main ()
-// {
-// 	char *mine = "my name is mohimi!";
-// 	char *theirs;
-// 	theirs =ft_substr(mine, 5, 6);
-// 	printf("Mine---->:%s\n", mine);
-// 	printf("Theirs---->:%s\n", theirs);
-// 	return(0); 
-// }
